@@ -1,0 +1,2170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>XL SATU — WiFi Rumah Andalan untuk Keluarga Indonesia</title>
+<meta name="description" content="Internet rumah tanpa kabel dengan kecepatan hingga 300 Mbps. Gratis STB, 20+ channel, dan bonus double speed. Daftar sekarang lewat Arul, agen resmi XL SATU." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --paper: #F4EEE2;
+  --paper-deep: #ECE3D2;
+  --paper-warm: #FAF6EC;
+  --ink: #0A1929;
+  --ink-soft: #2A3850;
+  --ink-mute: #5A6478;
+  --rule: #1a2a3f;
+  --xl-blue: #0057B8;
+  --xl-blue-deep: #003D80;
+  --xl-cyan: #00C4D6;
+  --xl-cyan-soft: #6EDCE3;
+  --accent-fire: #E94B1F;
+  --accent-amber: #F5A524;
+  --shadow-paper: 0 1px 0 rgba(10,25,41,.06), 0 18px 40px -28px rgba(10,25,41,.18);
+
+  --fs-display: clamp(2.6rem, 8.5vw, 8.4rem);
+  --fs-h1: clamp(2rem, 5vw, 4.2rem);
+  --fs-h2: clamp(1.6rem, 3.4vw, 2.6rem);
+  --fs-h3: clamp(1.15rem, 1.8vw, 1.45rem);
+  --fs-body: clamp(1rem, 1.05vw, 1.125rem);
+  --fs-small: 0.825rem;
+  --fs-eyebrow: 0.72rem;
+
+  --space-xs: 0.4rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: clamp(3rem, 6vw, 6rem);
+  --space-2xl: clamp(5rem, 10vw, 10rem);
+
+  --serif: "Instrument Serif", "Iowan Old Style", "Apple Garamond", Georgia, serif;
+  --sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: var(--sans);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(10,25,41,0.045) 1px, transparent 0);
+  background-size: 4px 4px;
+  overflow-x: hidden;
+  font-feature-settings: "ss01", "cv11";
+}
+
+::selection { background: var(--xl-cyan); color: var(--ink); }
+
+img { max-width: 100%; display: block; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; border: none; background: none; }
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+
+.eyebrow {
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+  color: var(--ink-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.eyebrow::before {
+  content: "";
+  width: 1.5rem;
+  height: 1px;
+  background: currentColor;
+}
+.eyebrow.no-rule::before { display: none; }
+
+.serif { font-family: var(--serif); font-weight: 400; }
+
+/* ============================================
+   HEADER
+   ============================================ */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.1rem 0;
+  transition: background 0.4s var(--ease-out), backdrop-filter 0.4s var(--ease-out), border-color 0.4s var(--ease-out);
+  border-bottom: 1px solid transparent;
+}
+.site-header.scrolled {
+  background: rgba(244, 238, 226, 0.85);
+  backdrop-filter: saturate(140%) blur(14px);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+  border-bottom-color: rgba(10,25,41,0.08);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+.logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 1.45rem;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.logo .x { color: var(--xl-cyan); font-style: italic; }
+.logo .l { color: var(--xl-blue-deep); }
+.logo .satu { color: var(--xl-blue); font-weight: 600; letter-spacing: -0.02em; }
+.logo .satu .one {
+  display: inline-block;
+  color: var(--xl-cyan);
+  transform: translateY(-1px);
+}
+
+.nav-primary { display: none; gap: 2rem; }
+.nav-primary a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  position: relative;
+  padding: 0.4rem 0;
+  transition: color 0.2s ease;
+}
+.nav-primary a:hover { color: var(--ink); }
+.nav-primary a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  height: 1px;
+  width: 0;
+  background: var(--ink);
+  transition: width 0.3s var(--ease-out);
+}
+.nav-primary a:hover::after { width: 100%; }
+
+@media (min-width: 880px) {
+  .nav-primary { display: inline-flex; }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  border-radius: 999px;
+  transition: transform 0.25s var(--ease-out), background 0.25s var(--ease-out), color 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--ink);
+  color: var(--paper-warm);
+  box-shadow: 0 1px 2px rgba(10,25,41,0.2), 0 8px 24px -10px rgba(10,25,41,0.5);
+}
+.btn-primary:hover { background: var(--xl-blue-deep); transform: translateY(-1px); }
+.btn-cyan {
+  background: var(--xl-cyan);
+  color: var(--ink);
+}
+.btn-cyan:hover { background: var(--xl-cyan-soft); transform: translateY(-1px); }
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid rgba(10,25,41,0.2);
+}
+.btn-ghost:hover { background: var(--ink); color: var(--paper-warm); }
+.btn-large { padding: 1.15rem 1.85rem; font-size: 1rem; }
+
+.btn .arrow {
+  display: inline-block;
+  transition: transform 0.3s var(--ease-out);
+}
+.btn:hover .arrow { transform: translateX(3px); }
+
+.wa-icon { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  padding-top: clamp(7rem, 14vw, 11rem);
+  padding-bottom: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid rgba(10,25,41,0.12);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+.hero-bar .marquee-row {
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.hero-bar .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent-fire);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.4); }
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: end;
+}
+@media (min-width: 960px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: var(--space-2xl);
+  }
+}
+
+.hero-display {
+  font-family: var(--serif);
+  font-size: var(--fs-display);
+  line-height: 0.92;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  font-weight: 400;
+}
+.hero-display em {
+  font-style: italic;
+  color: var(--xl-blue);
+}
+.hero-display .strike {
+  position: relative;
+  display: inline-block;
+  color: var(--ink-mute);
+}
+.hero-display .strike::after {
+  content: "";
+  position: absolute;
+  left: -2%; right: -2%;
+  top: 54%;
+  height: 0.08em;
+  background: var(--accent-fire);
+  transform: rotate(-3deg);
+}
+
+.hero-display .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60%);
+  animation: word-in 0.9s var(--ease-out-expo) forwards;
+}
+.hero-display .word:nth-child(1) { animation-delay: 0.05s; }
+.hero-display .word:nth-child(2) { animation-delay: 0.15s; }
+.hero-display .word:nth-child(3) { animation-delay: 0.25s; }
+.hero-display .word:nth-child(4) { animation-delay: 0.35s; }
+.hero-display .word:nth-child(5) { animation-delay: 0.45s; }
+.hero-display .word:nth-child(6) { animation-delay: 0.55s; }
+.hero-display .word:nth-child(7) { animation-delay: 0.65s; }
+
+@keyframes word-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding-bottom: 0.4rem;
+}
+.hero-side p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 38ch;
+}
+
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.4rem;
+}
+
+.hero-stats {
+  margin-top: var(--space-xl);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+  border-top: 1px solid rgba(10,25,41,0.12);
+  padding-top: var(--space-lg);
+}
+@media (min-width: 760px) {
+  .hero-stats { grid-template-columns: repeat(4, 1fr); }
+}
+.hero-stat .num {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.hero-stat .num em { font-style: italic; color: var(--xl-blue); }
+.hero-stat .label {
+  margin-top: 0.6rem;
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+/* WiFi waves on hero */
+.hero-deco {
+  position: absolute;
+  pointer-events: none;
+  top: 6rem; right: -8rem;
+  width: 32rem;
+  height: 32rem;
+  z-index: 0;
+  opacity: 0.6;
+}
+.hero-deco svg { width: 100%; height: 100%; }
+.hero-deco circle {
+  fill: none;
+  stroke: var(--xl-blue);
+  stroke-width: 1;
+  opacity: 0.18;
+  transform-origin: center;
+  animation: wave 5s ease-out infinite;
+}
+.hero-deco circle:nth-child(1) { animation-delay: 0s; }
+.hero-deco circle:nth-child(2) { animation-delay: 0.6s; }
+.hero-deco circle:nth-child(3) { animation-delay: 1.2s; }
+.hero-deco circle:nth-child(4) { animation-delay: 1.8s; }
+.hero-deco circle:nth-child(5) { animation-delay: 2.4s; }
+
+@keyframes wave {
+  0% { transform: scale(0.4); opacity: 0; }
+  10% { opacity: 0.35; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+@media (min-width: 960px) {
+  .hero-deco { right: -4rem; top: 4rem; }
+}
+
+/* ============================================
+   MARQUEE
+   ============================================ */
+.marquee {
+  border-top: 1px solid rgba(10,25,41,0.12);
+  border-bottom: 1px solid rgba(10,25,41,0.12);
+  padding: 1.4rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--paper-deep);
+}
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 3rem;
+  animation: scroll 35s linear infinite;
+}
+.marquee-track span {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-style: italic;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 3rem;
+  letter-spacing: -0.01em;
+}
+.marquee-track .dot-sep {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--xl-cyan);
+  display: inline-block;
+}
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+section { position: relative; }
+
+.section-pad { padding: var(--space-2xl) 0; }
+
+.section-head {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+@media (min-width: 880px) {
+  .section-head { grid-template-columns: 1fr 1.6fr; gap: var(--space-2xl); align-items: end; }
+}
+.section-head h2 {
+  font-family: var(--serif);
+  font-size: var(--fs-h1);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+.section-head h2 em { font-style: italic; color: var(--xl-blue); }
+.section-head .lede {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 56ch;
+}
+
+/* ============================================
+   WHY (numbered editorial list)
+   ============================================ */
+.why-list {
+  list-style: none;
+  display: grid;
+  gap: 0;
+  border-top: 1px solid rgba(10,25,41,0.12);
+}
+.why-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(10,25,41,0.12);
+  align-items: start;
+  transition: background 0.4s var(--ease-out);
+  position: relative;
+}
+@media (min-width: 880px) {
+  .why-item { grid-template-columns: 5rem 1.4fr 2fr 1fr; gap: 2rem; align-items: center; padding: 2.5rem 0.6rem; }
+}
+.why-item:hover { background: var(--paper-warm); }
+.why-num {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-style: italic;
+  color: var(--xl-cyan);
+  line-height: 1;
+}
+.why-title {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+}
+.why-desc {
+  font-size: 0.97rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.why-tag {
+  font-size: var(--fs-small);
+  color: var(--ink-mute);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+@media (max-width: 879px) {
+  .why-tag { display: none; }
+  .why-item .why-desc { grid-column: 2; }
+}
+
+/* ============================================
+   PACKAGES
+   ============================================ */
+.packages {
+  background: var(--ink);
+  color: var(--paper-warm);
+  border-radius: 28px;
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3.5rem);
+  margin: 0 auto;
+  max-width: calc(1440px - clamp(2.5rem, 8vw, 6rem));
+  position: relative;
+  overflow: hidden;
+}
+.packages::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+  background-size: 4px 4px;
+  pointer-events: none;
+}
+.packages .section-head h2 { color: var(--paper-warm); }
+.packages .section-head .lede { color: rgba(244, 238, 226, 0.7); }
+.packages .eyebrow { color: var(--xl-cyan-soft); }
+.packages .eyebrow::before { background: var(--xl-cyan-soft); }
+.packages .section-head h2 em { color: var(--xl-cyan); }
+
+.pkg-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 760px) {
+  .pkg-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.pkg {
+  border: 1px solid rgba(244,238,226,0.16);
+  border-radius: 20px;
+  padding: 2rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+  position: relative;
+  transition: transform 0.4s var(--ease-out), border-color 0.4s var(--ease-out), background 0.4s var(--ease-out);
+  overflow: hidden;
+}
+.pkg:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 196, 214, 0.4);
+}
+.pkg.featured {
+  background: var(--paper-warm);
+  color: var(--ink);
+  border-color: var(--paper-warm);
+}
+.pkg.featured .pkg-meta,
+.pkg.featured .pkg-includes-title,
+.pkg.featured .pkg-old { color: var(--ink-soft); }
+.pkg.featured .pkg-rule { background: rgba(10,25,41,0.12); }
+
+.pkg-tag {
+  position: absolute;
+  top: 1.4rem; right: 1.4rem;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--xl-cyan);
+  color: var(--ink);
+  padding: 0.3rem 0.55rem;
+  border-radius: 4px;
+}
+.pkg-tag.fire { background: var(--accent-fire); color: var(--paper-warm); }
+
+.pkg-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-size: var(--fs-small);
+  color: rgba(244,238,226,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.pkg-speed {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(5.5rem, 12vw, 9rem);
+  line-height: 0.85;
+  letter-spacing: -0.045em;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+.pkg-speed .unit {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  color: var(--xl-cyan-soft);
+}
+.pkg.featured .pkg-speed .unit { color: var(--xl-blue); }
+
+.pkg-bonus {
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.7rem;
+  background: rgba(0, 196, 214, 0.16);
+  color: var(--xl-cyan);
+  border-radius: 999px;
+  font-weight: 600;
+  align-self: flex-start;
+}
+.pkg.featured .pkg-bonus {
+  background: rgba(0, 87, 184, 0.12);
+  color: var(--xl-blue);
+}
+
+.pkg-rule { height: 1px; background: rgba(244,238,226,0.12); }
+
+.pkg-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-family: var(--sans);
+}
+.pkg-price .currency {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--xl-cyan-soft);
+}
+.pkg.featured .pkg-price .currency { color: var(--xl-blue); }
+.pkg-price .amt {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.pkg-price .per {
+  font-size: 0.85rem;
+  color: rgba(244,238,226,0.65);
+}
+.pkg.featured .pkg-price .per { color: var(--ink-soft); }
+
+.pkg-old {
+  font-size: 0.85rem;
+  color: rgba(244,238,226,0.55);
+  text-decoration: line-through;
+  text-decoration-color: var(--accent-fire);
+  text-decoration-thickness: 1px;
+}
+
+.pkg-includes-title {
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(244,238,226,0.55);
+  font-weight: 600;
+}
+
+.pkg-includes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+}
+.pkg-includes li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+.pkg-includes li::before {
+  content: "+";
+  color: var(--xl-cyan);
+  font-weight: 700;
+  margin-top: -2px;
+}
+.pkg.featured .pkg-includes li::before { color: var(--xl-blue); }
+
+.pkg-cta {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: rgba(244,238,226,0.08);
+  color: var(--paper-warm);
+  border: 1px solid rgba(244,238,226,0.2);
+  transition: background 0.3s var(--ease-out);
+}
+.pkg-cta:hover { background: var(--xl-cyan); color: var(--ink); border-color: var(--xl-cyan); }
+.pkg.featured .pkg-cta {
+  background: var(--ink);
+  color: var(--paper-warm);
+  border-color: var(--ink);
+}
+.pkg.featured .pkg-cta:hover { background: var(--xl-blue); border-color: var(--xl-blue); }
+
+/* ============================================
+   PROMO STRIP (limited time offers)
+   ============================================ */
+.promo {
+  position: relative;
+}
+.promo-card {
+  background: var(--paper-warm);
+  border: 1px solid rgba(10,25,41,0.12);
+  border-radius: 28px;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 880px) {
+  .promo-card { grid-template-columns: 1.1fr 1.4fr; gap: 4rem; align-items: center; }
+}
+.promo-tag {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent-fire);
+}
+.promo-tag::before {
+  content: "";
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent-fire);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+.promo-card h3 {
+  margin-top: 1.1rem;
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.promo-card h3 em { font-style: italic; color: var(--xl-blue); }
+.promo-card p {
+  margin-top: 1rem;
+  color: var(--ink-soft);
+  max-width: 44ch;
+}
+.promo-meta {
+  margin-top: 1.4rem;
+  display: flex; flex-wrap: wrap; gap: 1.5rem;
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+.promo-meta span strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  margin-bottom: 0.15rem;
+}
+.promo-cta-row {
+  margin-top: 1.8rem;
+  display: flex; flex-wrap: wrap; gap: 0.6rem;
+}
+
+.promo-bundles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.bundle {
+  background: var(--paper-deep);
+  border-radius: 20px;
+  padding: 1.5rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s var(--ease-out);
+}
+.bundle:hover { transform: translateY(-3px); }
+.bundle-speed {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--xl-blue);
+  margin-bottom: 0.4rem;
+}
+.bundle-speed sub {
+  font-size: 0.45em;
+  font-family: var(--sans);
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  vertical-align: baseline;
+  margin-left: 0.2rem;
+  color: var(--ink-soft);
+}
+.bundle-period {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+.bundle-rule { height: 1px; background: rgba(10,25,41,0.12); margin: 1rem 0; }
+.bundle-price {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.bundle-price small {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  display: block;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+}
+.bundle-bonus {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  background: var(--xl-cyan);
+  color: var(--ink);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ============================================
+   INCLUDES GRID
+   ============================================ */
+.includes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 760px) {
+  .includes-grid { grid-template-columns: 1.6fr 1fr; gap: 1.25rem; }
+}
+
+.includes-grid > div {
+  border: 1px solid rgba(10,25,41,0.14);
+  border-radius: 20px;
+  padding: clamp(1.6rem, 3vw, 2.4rem);
+  background: var(--paper-warm);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s var(--ease-out), transform 0.4s var(--ease-out);
+}
+.includes-grid > div:hover { border-color: var(--xl-blue); transform: translateY(-2px); }
+
+.inc-eyebrow {
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: var(--xl-blue);
+}
+.inc-title {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+.inc-title em { font-style: italic; color: var(--xl-blue); }
+.inc-desc {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.inc-stb {
+  grid-row: span 2;
+}
+.inc-channels {
+  display: flex; flex-direction: column;
+}
+.inc-channels .num {
+  font-family: var(--serif);
+  font-size: clamp(4rem, 9vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  margin-top: auto;
+}
+.inc-channels .num em {
+  font-style: italic;
+  color: var(--xl-cyan);
+}
+.inc-streams {
+  display: flex; flex-direction: column;
+}
+.inc-streams .logos {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+.inc-streams .pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  background: var(--ink);
+  color: var(--paper-warm);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+.inc-streams .pill.cyan { background: var(--xl-cyan); color: var(--ink); }
+.inc-streams .pill.fire { background: var(--accent-fire); color: var(--paper-warm); }
+
+.inc-stb-art {
+  margin-top: auto;
+  position: relative;
+  height: 220px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--ink) 0%, #163355 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inc-stb-art .stb-box {
+  width: 60%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(180deg, #1a1a1a, #0a0a0a);
+  border-radius: 8px;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 16px 40px -10px rgba(0,0,0,0.6);
+}
+.inc-stb-art .stb-box::before {
+  content: "";
+  position: absolute;
+  bottom: 14%;
+  left: 12%;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--xl-cyan);
+  box-shadow: 0 0 8px var(--xl-cyan);
+  animation: blink 2.5s ease-in-out infinite;
+}
+.inc-stb-art .stb-box::after {
+  content: "X";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--sans);
+  font-weight: 800;
+  font-style: italic;
+  font-size: 2.2rem;
+  color: var(--xl-cyan);
+  letter-spacing: -0.04em;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ============================================
+   STEPS — How to register
+   ============================================ */
+.steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid rgba(10,25,41,0.12);
+}
+@media (min-width: 760px) {
+  .steps { grid-template-columns: repeat(3, 1fr); border-top: none; }
+}
+.step {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(10,25,41,0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+@media (min-width: 760px) {
+  .step {
+    padding: 0 2rem 0 0;
+    border-bottom: none;
+    border-right: 1px solid rgba(10,25,41,0.12);
+  }
+  .step:last-child { border-right: none; padding-right: 0; }
+  .step:not(:first-child) { padding-left: 2rem; padding-right: 2rem; }
+}
+.step-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--xl-cyan);
+  letter-spacing: -0.01em;
+}
+.step-title {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+.step-title em { font-style: italic; color: var(--xl-blue); }
+.step-desc {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   QUOTE
+   ============================================ */
+.quote-section {
+  background: var(--paper-deep);
+  padding: var(--space-2xl) 0;
+}
+.quote {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+.quote blockquote {
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-weight: 400;
+}
+.quote blockquote em { font-style: italic; color: var(--xl-blue); }
+.quote .open {
+  display: block;
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-style: italic;
+  color: var(--xl-cyan);
+  line-height: 0.5;
+  margin-bottom: 1rem;
+}
+.quote .attribution {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+.quote .avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--xl-blue), var(--xl-cyan));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--paper-warm);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: -0.02em;
+}
+.quote .attribution strong { color: var(--ink); display: block; font-weight: 700; font-size: 0.95rem; }
+
+/* ============================================
+   CONTACT
+   ============================================ */
+.contact-card {
+  background: var(--ink);
+  color: var(--paper-warm);
+  border-radius: 28px;
+  padding: clamp(2rem, 5vw, 4.5rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 960px) {
+  .contact-card { grid-template-columns: 5fr 6fr; gap: var(--space-2xl); }
+}
+
+.contact-side .eyebrow { color: var(--xl-cyan-soft); }
+.contact-side .eyebrow::before { background: var(--xl-cyan-soft); }
+.contact-side h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  margin: 1.2rem 0 1.4rem;
+}
+.contact-side h2 em { font-style: italic; color: var(--xl-cyan); }
+.contact-side p { color: rgba(244,238,226,0.7); max-width: 38ch; }
+
+.agent-card {
+  margin-top: 2rem;
+  padding: 1.4rem;
+  border: 1px solid rgba(244,238,226,0.18);
+  border-radius: 18px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+}
+.agent-photo {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--xl-cyan), var(--xl-blue));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.7rem;
+  color: var(--paper-warm);
+}
+.agent-info .name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.005em;
+}
+.agent-info .role {
+  font-size: 0.8rem;
+  color: rgba(244,238,226,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+.agent-info .phone {
+  margin-top: 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--xl-cyan);
+  font-feature-settings: "tnum";
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-content: start;
+}
+.contact-form .field { display: flex; flex-direction: column; gap: 0.4rem; }
+.contact-form .field.full { grid-column: 1 / -1; }
+.contact-form label {
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  color: rgba(244,238,226,0.55);
+}
+.contact-form .input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(244,238,226,0.25);
+  padding: 0.7rem 0;
+  font-size: 1rem;
+  color: var(--paper-warm);
+  font-family: var(--sans);
+  outline: none;
+  transition: border-color 0.25s var(--ease-out);
+  border-radius: 0;
+}
+.contact-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23F4EEE2' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.4rem center;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+.contact-form select option { background: var(--ink); color: var(--paper-warm); }
+.contact-form .input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus { border-color: var(--xl-cyan); }
+.contact-form textarea { resize: vertical; min-height: 100px; line-height: 1.5; }
+.contact-form .input::placeholder,
+.contact-form textarea::placeholder { color: rgba(244,238,226,0.35); }
+
+.contact-form .submit-row {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(244,238,226,0.12);
+}
+.contact-form .privacy {
+  font-size: 0.78rem;
+  color: rgba(244,238,226,0.5);
+  max-width: 30ch;
+  line-height: 1.4;
+}
+.btn-submit {
+  background: var(--xl-cyan);
+  color: var(--ink);
+  padding: 1.1rem 1.7rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  transition: background 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+}
+.btn-submit:hover { background: var(--xl-cyan-soft); transform: translateY(-1px); }
+
+/* ============================================
+   FAQ
+   ============================================ */
+.faq {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.faq-item {
+  border-bottom: 1px solid rgba(10,25,41,0.14);
+}
+.faq-item:first-child { border-top: 1px solid rgba(10,25,41,0.14); }
+.faq-q {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.6rem 0;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.25s var(--ease-out);
+}
+.faq-q:hover { color: var(--xl-blue); }
+.faq-q span {
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  flex: 1;
+}
+.faq-icon {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-style: italic;
+  color: var(--xl-cyan);
+  line-height: 1;
+  flex-shrink: 0;
+  transition: transform 0.4s var(--ease-out);
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s var(--ease-out);
+}
+.faq-item.open .faq-a { grid-template-rows: 1fr; }
+.faq-a > div {
+  overflow: hidden;
+  color: var(--ink-soft);
+  font-size: 0.97rem;
+  line-height: 1.6;
+}
+.faq-a > div p { padding-bottom: 1.6rem; max-width: 70ch; }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  padding: var(--space-xl) 0 var(--space-lg);
+  border-top: 1px solid rgba(10,25,41,0.14);
+  margin-top: var(--space-xl);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: end;
+}
+@media (min-width: 760px) {
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; }
+}
+.foot-display {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+  color: var(--ink);
+}
+.foot-display em { font-style: italic; color: var(--xl-blue); }
+.foot-col h4 {
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--ink-mute);
+}
+.foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.foot-col a {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  transition: color 0.2s ease;
+}
+.foot-col a:hover { color: var(--ink); }
+
+.foot-bottom {
+  margin-top: var(--space-xl);
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(10,25,41,0.14);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--ink-mute);
+}
+
+/* ============================================
+   FLOATING WHATSAPP
+   ============================================ */
+.fab {
+  position: fixed;
+  bottom: 1.5rem; right: 1.5rem;
+  z-index: 50;
+  background: #25D366;
+  color: white;
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 28px -6px rgba(37, 211, 102, 0.5), 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s var(--ease-out), background 0.3s var(--ease-out);
+}
+.fab:hover { transform: scale(1.06); background: #1ebd5a; }
+.fab svg { width: 28px; height: 28px; }
+.fab::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #25D366;
+  opacity: 0.5;
+  animation: pulse-ring 2s ease-out infinite;
+}
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* ============================================
+   REVEAL (intersection observer)
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================
+   TOAST
+   ============================================ */
+.toast {
+  position: fixed;
+  bottom: 6.5rem; right: 1.5rem;
+  background: var(--ink);
+  color: var(--paper-warm);
+  padding: 0.95rem 1.2rem;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  box-shadow: 0 16px 40px -10px rgba(0,0,0,0.4);
+  z-index: 60;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: transform 0.5s var(--ease-out-expo), opacity 0.5s var(--ease-out-expo);
+  max-width: 300px;
+  display: flex; gap: 0.6rem;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+.toast .check {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--xl-cyan);
+  color: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+</style>
+</head>
+<body>
+
+<!-- ====== HEADER ====== -->
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a href="#top" class="logo" aria-label="XL SATU">
+      <span class="x">X</span><span class="l">L</span>
+      <span class="satu">sa<span class="one">1</span>u</span>
+    </a>
+    <nav class="nav-primary" aria-label="Primary">
+      <a href="#paket">Paket</a>
+      <a href="#promo">Promo</a>
+      <a href="#fitur">Fitur</a>
+      <a href="#cara">Cara Daftar</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#kontak" class="btn btn-primary">
+      Hubungi Arul <span class="arrow">↗</span>
+    </a>
+  </div>
+</header>
+
+<!-- ====== HERO ====== -->
+<section class="hero" id="top">
+  <div class="container">
+
+    <div class="hero-bar">
+      <div class="marquee-row"><span class="dot"></span> Promo aktif sampai <strong style="color:var(--ink);font-weight:700;margin-left:0.2rem">31 Mei 2026</strong></div>
+      <div>Surakarta · Jakarta · Bandung · Surabaya · Yogyakarta &nbsp;—&nbsp; coverage berkembang</div>
+      <div>Edisi 01 / 2026</div>
+    </div>
+
+    <div class="hero-deco" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <circle cx="200" cy="200" r="40" />
+        <circle cx="200" cy="200" r="40" />
+        <circle cx="200" cy="200" r="40" />
+        <circle cx="200" cy="200" r="40" />
+        <circle cx="200" cy="200" r="40" />
+      </svg>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <h1 class="hero-display">
+          <span class="word">WiFi</span> <span class="word">rumah</span><br>
+          <span class="word"><em>tanpa</em></span> <span class="word">drama,</span><br>
+          <span class="word">tanpa</span> <span class="word"><span class="strike">kabel</span></span>,<br>
+          <span class="word">tanpa</span> kompromi.
+        </h1>
+      </div>
+      <aside class="hero-side">
+        <span class="eyebrow">XL SATU — Fixed Wireless Access</span>
+        <p>
+          Internet rumah generasi baru dari XL. Pasang cepat tanpa galian kabel,
+          kecepatan hingga <strong style="color:var(--ink);font-weight:700">300 Mbps</strong>,
+          gratis STB &amp; 20+ channel, plus bonus double speed selama 6 bulan.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#paket" class="btn btn-primary">Lihat paket <span class="arrow">→</span></a>
+          <a href="#kontak" class="btn btn-ghost">Konsultasi gratis</a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num">300<em>mbps</em></div>
+        <div class="label">Kecepatan maks</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">2<em>×</em></div>
+        <div class="label">Bonus speed 6 bulan</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">20<em>+</em></div>
+        <div class="label">Channel TV gratis</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">0<em>Rp</em></div>
+        <div class="label">Biaya STB</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== MARQUEE ====== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Streaming tanpa buffering <span class="dot-sep"></span></span>
+    <span>Gaming low ping <span class="dot-sep"></span></span>
+    <span>Work-from-home siap 4K <span class="dot-sep"></span></span>
+    <span>Smart home terhubung penuh <span class="dot-sep"></span></span>
+    <span>Unlimited tanpa FUP <span class="dot-sep"></span></span>
+    <span>Streaming tanpa buffering <span class="dot-sep"></span></span>
+    <span>Gaming low ping <span class="dot-sep"></span></span>
+    <span>Work-from-home siap 4K <span class="dot-sep"></span></span>
+    <span>Smart home terhubung penuh <span class="dot-sep"></span></span>
+    <span>Unlimited tanpa FUP <span class="dot-sep"></span></span>
+  </div>
+</div>
+
+<!-- ====== WHY ====== -->
+<section class="section-pad" id="why">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Mengapa XL SATU</span>
+        <h2 style="margin-top:1rem">Empat alasan keluarga<br><em>memilih kami.</em></h2>
+      </div>
+      <p class="lede">
+        Bukan sekadar internet cepat. XL SATU dirancang untuk rumah Indonesia hari ini —
+        dari ruang kerja sampai ruang tamu, dari gawai pertama anak sampai TV bersama
+        di akhir pekan.
+      </p>
+    </div>
+
+    <ul class="why-list">
+      <li class="why-item reveal">
+        <div class="why-num">01</div>
+        <div class="why-title">Pasang dalam hitungan jam, bukan hari.</div>
+        <div class="why-desc">Tanpa galian kabel, tanpa antri tukang. Teknisi datang, sinyal aktif, rumah online.</div>
+        <div class="why-tag">Fixed Wireless</div>
+      </li>
+      <li class="why-item reveal">
+        <div class="why-num">02</div>
+        <div class="why-title">Unlimited tanpa FUP yang bikin gigit jari.</div>
+        <div class="why-desc">Streaming, download, video call — pakai sepuasnya tanpa pelambatan tersembunyi.</div>
+        <div class="why-tag">No Throttling</div>
+      </li>
+      <li class="why-item reveal">
+        <div class="why-num">03</div>
+        <div class="why-title">Hiburan keluarga sudah termasuk.</div>
+        <div class="why-desc">Set-top box gratis, 20+ channel, plus akses Vidio &amp; Catchplay tanpa biaya tambahan.</div>
+        <div class="why-tag">+ Vidio &amp; Catchplay</div>
+      </li>
+      <li class="why-item reveal">
+        <div class="why-num">04</div>
+        <div class="why-title">Bonus 2× speed selama 6 bulan pertama.</div>
+        <div class="why-desc">Daftar paket Mei 2026, nikmati kecepatan ganda untuk semester pertama tanpa biaya ekstra.</div>
+        <div class="why-tag">Limited Time</div>
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- ====== PACKAGES ====== -->
+<section class="section-pad" id="paket">
+  <div class="packages">
+
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Paket Reguler</span>
+        <h2 style="margin-top:1rem">Pilih paket yang<br><em>sesuai rumah Anda.</em></h2>
+      </div>
+      <p class="lede">
+        Tiga tingkat kecepatan, semuanya unlimited tanpa FUP, semuanya sudah termasuk STB
+        &amp; 20+ channel. Harga sudah termasuk PPN 11%. Bonus 2× kecepatan otomatis aktif
+        selama 6 bulan pertama.
+      </p>
+    </div>
+
+    <div class="pkg-grid">
+
+      <div class="pkg reveal">
+        <div class="pkg-meta">Speed Up To <span style="color:var(--xl-cyan-soft);text-decoration:line-through;text-decoration-color:var(--accent-fire)">50 Mbps</span></div>
+        <div class="pkg-speed">100<span class="unit">Mbps</span></div>
+        <div class="pkg-bonus">⚡ 2× speed · 6 bulan</div>
+        <div class="pkg-rule"></div>
+        <div class="pkg-price">
+          <span class="currency">Rp</span>
+          <span class="amt">229</span>
+          <span class="per">rb / bulan</span>
+        </div>
+        <div class="pkg-includes-title">Sudah termasuk</div>
+        <ul class="pkg-includes">
+          <li>STB gratis seumur langganan</li>
+          <li>20+ channel TV freemium</li>
+          <li>Akses Vidio &amp; Catchplay</li>
+          <li>Unlimited tanpa FUP</li>
+        </ul>
+        <a href="#kontak" class="pkg-cta" data-pkg="100 Mbps · Rp 229rb/bln">Daftar paket ini <span class="arrow">→</span></a>
+      </div>
+
+      <div class="pkg featured reveal">
+        <span class="pkg-tag">Paling Populer</span>
+        <div class="pkg-meta">Speed Up To <span style="text-decoration:line-through;text-decoration-color:var(--accent-fire)">100 Mbps</span></div>
+        <div class="pkg-speed">200<span class="unit">Mbps</span></div>
+        <div class="pkg-bonus">⚡ 2× speed · 6 bulan</div>
+        <div class="pkg-rule"></div>
+        <div class="pkg-price">
+          <span class="currency">Rp</span>
+          <span class="amt">279</span>
+          <span class="per">rb / bulan</span>
+        </div>
+        <div class="pkg-includes-title">Sudah termasuk</div>
+        <ul class="pkg-includes">
+          <li>STB gratis seumur langganan</li>
+          <li>20+ channel TV freemium</li>
+          <li>Akses Vidio &amp; Catchplay</li>
+          <li>Unlimited tanpa FUP</li>
+          <li>Prioritas instalasi</li>
+        </ul>
+        <a href="#kontak" class="pkg-cta" data-pkg="200 Mbps · Rp 279rb/bln (Paling Populer)">Daftar paket ini <span class="arrow">→</span></a>
+      </div>
+
+      <div class="pkg reveal">
+        <span class="pkg-tag fire">Best Value</span>
+        <div class="pkg-meta">Speed Up To <span style="color:var(--xl-cyan-soft);text-decoration:line-through;text-decoration-color:var(--accent-fire)">150 Mbps</span></div>
+        <div class="pkg-speed">300<span class="unit">Mbps</span></div>
+        <div class="pkg-bonus">⚡ 2× speed · 6 bulan</div>
+        <div class="pkg-rule"></div>
+        <div class="pkg-price">
+          <span class="currency">Rp</span>
+          <span class="amt">299</span>
+          <span class="per">rb / bulan</span>
+        </div>
+        <div class="pkg-includes-title">Sudah termasuk</div>
+        <ul class="pkg-includes">
+          <li>STB gratis seumur langganan</li>
+          <li>20+ channel TV freemium</li>
+          <li>Akses Vidio &amp; Catchplay</li>
+          <li>Unlimited tanpa FUP</li>
+          <li>Mesh-ready untuk rumah besar</li>
+        </ul>
+        <a href="#kontak" class="pkg-cta" data-pkg="300 Mbps · Rp 299rb/bln (Best Value)">Daftar paket ini <span class="arrow">→</span></a>
+      </div>
+
+    </div>
+
+    <p style="margin-top:2rem;font-size:0.78rem;color:rgba(244,238,226,0.55);text-align:center;max-width:60ch;margin-left:auto;margin-right:auto">
+      *Harga sudah termasuk PPN 11%. Speed bonus 2× berlaku 6 bulan pertama, kembali ke speed dasar setelah masa promo.
+    </p>
+
+  </div>
+</section>
+
+<!-- ====== PROMO STRIP ====== -->
+<section class="section-pad" id="promo">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Edisi Terbatas</span>
+        <h2 style="margin-top:1rem">Bayar 3 bulan,<br><em>nikmati 4 bulan.</em></h2>
+      </div>
+      <p class="lede">
+        Promo spesial untuk pelanggan baru &amp; pelanggan yang kembali — daftar sebelum
+        31 Mei 2026 dan dapatkan tambahan 1 bulan layanan gratis di paket pilihan Anda.
+      </p>
+    </div>
+
+    <div class="promo-card reveal">
+      <div>
+        <span class="promo-tag">Promo aktif · berakhir 31 Mei 2026</span>
+        <h3>Tiga bulan,<br>plus satu bulan <em>gratis.</em></h3>
+        <p>
+          Bayar di muka untuk masa layanan 3 bulan dan otomatis dapat tambahan 1 bulan layanan
+          tanpa biaya. Berlaku untuk paket 50 Mbps dan 100 Mbps. Sudah termasuk streaming
+          Vidio &amp; Catchplay 3 bulan.
+        </p>
+        <div class="promo-meta">
+          <span><strong>+ 1 bulan</strong>Layanan tambahan</span>
+          <span><strong>Vidio + Catchplay</strong>3 bulan gratis</span>
+          <span><strong>Tanpa FUP</strong>Selama masa layanan</span>
+        </div>
+        <div class="promo-cta-row">
+          <a href="#kontak" class="btn btn-cyan" data-pkg="Promo Edisi Terbatas — bayar 3 bulan dapat 4 bulan">Klaim promo <span class="arrow">→</span></a>
+          <a href="#faq" class="btn btn-ghost" style="border-color:rgba(10,25,41,0.2);">Syarat &amp; ketentuan</a>
+        </div>
+      </div>
+
+      <div class="promo-bundles">
+        <div class="bundle">
+          <div class="bundle-period">3 bulan</div>
+          <div class="bundle-speed">50<sub>Mbps</sub></div>
+          <div class="bundle-rule"></div>
+          <div class="bundle-price">
+            <small>Hanya</small>
+            Rp 721.500
+          </div>
+          <div class="bundle-bonus">+1 bulan</div>
+        </div>
+        <div class="bundle">
+          <div class="bundle-period">3 bulan</div>
+          <div class="bundle-speed">100<sub>Mbps</sub></div>
+          <div class="bundle-rule"></div>
+          <div class="bundle-price">
+            <small>Hanya</small>
+            Rp 876.900
+          </div>
+          <div class="bundle-bonus">+1 bulan</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== INCLUDES ====== -->
+<section class="section-pad" id="fitur">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Yang Anda Dapatkan</span>
+        <h2 style="margin-top:1rem">Semua sudah<br><em>di dalam kotak.</em></h2>
+      </div>
+      <p class="lede">
+        Tidak ada biaya tambahan untuk perangkat atau aplikasi hiburan.
+        Sekali daftar, semua siap dipasang &amp; ditonton.
+      </p>
+    </div>
+
+    <div class="includes-grid">
+
+      <div class="inc-stb reveal">
+        <span class="inc-eyebrow">Set-Top Box</span>
+        <h3 class="inc-title">TV pintar untuk<br>seluruh keluarga,<br><em>gratis selamanya.</em></h3>
+        <p class="inc-desc">
+          STB Android berkualitas, terhubung ke ribuan channel dan aplikasi streaming.
+          Tidak perlu beli, tidak perlu sewa — selama Anda berlangganan, ia milik rumah Anda.
+        </p>
+        <div class="inc-stb-art" aria-hidden="true">
+          <div class="stb-box"></div>
+        </div>
+      </div>
+
+      <div class="inc-channels reveal">
+        <span class="inc-eyebrow">Channel TV</span>
+        <h3 class="inc-title">Channel premium gratis</h3>
+        <p class="inc-desc">Berita, olahraga, anak-anak, hiburan dewasa — kurasi 20+ channel siap tayang dari hari pertama.</p>
+        <div class="num"><em>20</em>+</div>
+      </div>
+
+      <div class="inc-streams reveal">
+        <span class="inc-eyebrow">Streaming Bonus</span>
+        <h3 class="inc-title">Layanan OTT favorit Anda</h3>
+        <p class="inc-desc">Akses ke layanan streaming pilihan tanpa langganan terpisah, langsung dari STB Anda.</p>
+        <div class="logos">
+          <span class="pill">Vidio</span>
+          <span class="pill cyan">Catchplay</span>
+          <span class="pill fire">+ banyak lagi</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== STEPS ====== -->
+<section class="section-pad" id="cara" style="background:var(--paper-deep)">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Cara Daftar</span>
+        <h2 style="margin-top:1rem">Tiga langkah,<br><em>lalu nyala.</em></h2>
+      </div>
+      <p class="lede">
+        Lupakan formulir panjang dan kunjungan ke gerai. Cukup hubungi Arul,
+        agen resmi XL SATU, dan biarkan dia mengurus sisanya.
+      </p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">i.</div>
+        <div class="step-title"><em>Pilih paket</em> &amp; cek<br>coverage area Anda.</div>
+        <div class="step-desc">Kirim alamat lewat WhatsApp, dapatkan konfirmasi sinyal di lokasi Anda dalam hitungan menit.</div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">ii.</div>
+        <div class="step-title"><em>Jadwalkan</em><br>instalasi.</div>
+        <div class="step-desc">Pilih hari yang cocok untuk Anda. Teknisi datang membawa perangkat lengkap, siap dipasang.</div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">iii.</div>
+        <div class="step-title"><em>Nikmati</em><br>internet rumah.</div>
+        <div class="step-desc">Aktivasi cepat di tempat. Dalam 1–2 jam, seluruh rumah sudah terhubung dan TV sudah menyala.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== QUOTE ====== -->
+<section class="quote-section reveal">
+  <div class="quote">
+    <span class="open">"</span>
+    <blockquote>
+      Sudah dua bulan pakai XL SATU — <em>buffering itu cuma kenangan.</em>
+      Anak gaming, suami zoom, saya streaming, semua jalan bareng.
+    </blockquote>
+    <div class="attribution">
+      <div class="avatar">DA</div>
+      <div>
+        <strong>Dewi Anggraini</strong>
+        Pelanggan XL SATU 200 Mbps · Solo
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CONTACT ====== -->
+<section class="section-pad" id="kontak">
+  <div class="container">
+    <div class="contact-card reveal">
+
+      <div class="contact-side">
+        <span class="eyebrow">Hubungi Kami</span>
+        <h2>Mari obrolkan<br>paket yang <em>pas</em><br>untuk rumah Anda.</h2>
+        <p>
+          Isi formulir di samping atau langsung WhatsApp Arul, agen resmi XL SATU.
+          Konsultasi gratis, tanpa kewajiban berlangganan.
+        </p>
+
+        <div class="agent-card">
+          <div class="agent-photo" aria-hidden="true">A</div>
+          <div class="agent-info">
+            <div class="name">Arul</div>
+            <div class="role">Agen resmi XL SATU</div>
+            <a href="https://wa.me/6282228521987" class="phone" target="_blank" rel="noopener">
+              <svg class="wa-icon" viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.376 3 4 8.376 4 15.001c0 2.118.553 4.182 1.604 6L4 28l7.16-1.578a11.93 11.93 0 0 0 4.84 1.013c6.625 0 12.001-5.376 12.001-12.001S22.626 3 16.001 3Zm0 21.832a9.83 9.83 0 0 1-5.005-1.366l-.359-.213-4.252.937.91-4.144-.234-.371a9.825 9.825 0 0 1-1.523-5.273c0-5.434 4.422-9.856 9.857-9.856 2.633 0 5.108 1.026 6.97 2.888a9.79 9.79 0 0 1 2.886 6.971c0 5.435-4.422 9.857-9.85 9.857Z"/></svg>
+              0822 2852 1987
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="leadForm" novalidate>
+        <div class="field">
+          <label for="name">Nama lengkap</label>
+          <input class="input" id="name" name="name" required placeholder="Mis. Budi Santoso" autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="phone">No. WhatsApp</label>
+          <input class="input" id="phone" name="phone" required placeholder="08xx xxxx xxxx" autocomplete="tel" inputmode="tel" />
+        </div>
+        <div class="field full">
+          <label for="address">Alamat / area pemasangan</label>
+          <input class="input" id="address" name="address" required placeholder="Mis. Jl. Slamet Riyadi, Surakarta" />
+        </div>
+        <div class="field">
+          <label for="package">Paket diminati</label>
+          <select id="package" name="package" required>
+            <option value="">Pilih paket…</option>
+            <option>100 Mbps · Rp 229rb/bln</option>
+            <option>200 Mbps · Rp 279rb/bln</option>
+            <option>300 Mbps · Rp 299rb/bln</option>
+            <option>Promo 50 Mbps · 3 bulan + 1 bulan gratis</option>
+            <option>Promo 100 Mbps · 3 bulan + 1 bulan gratis</option>
+            <option>Belum yakin — minta rekomendasi</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="time">Waktu dihubungi</label>
+          <select id="time" name="time">
+            <option>Kapan saja</option>
+            <option>Pagi (08:00 — 12:00)</option>
+            <option>Siang (12:00 — 16:00)</option>
+            <option>Sore (16:00 — 20:00)</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="message">Pesan tambahan (opsional)</label>
+          <textarea id="message" name="message" placeholder="Mis. ada beberapa lantai, perlu coverage seluruh rumah…"></textarea>
+        </div>
+
+        <div class="submit-row">
+          <p class="privacy">
+            Dengan mengirim formulir, data Anda akan dikirim langsung ke WhatsApp agen Arul.
+            Tidak ada penyimpanan otomatis di server.
+          </p>
+          <button type="submit" class="btn-submit">
+            <svg class="wa-icon" viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.376 3 4 8.376 4 15.001c0 2.118.553 4.182 1.604 6L4 28l7.16-1.578a11.93 11.93 0 0 0 4.84 1.013c6.625 0 12.001-5.376 12.001-12.001S22.626 3 16.001 3Z"/></svg>
+            Kirim ke WhatsApp <span class="arrow">→</span>
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== FAQ ====== -->
+<section class="section-pad" id="faq">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">FAQ</span>
+        <h2 style="margin-top:1rem">Pertanyaan yang<br><em>sering ditanyakan.</em></h2>
+      </div>
+      <p class="lede">
+        Yang perlu Anda tahu sebelum pasang. Tidak menemukan jawabannya?
+        WhatsApp Arul, dia akan jawab dalam beberapa menit.
+      </p>
+    </div>
+
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Apakah XL SATU benar-benar tanpa kabel?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div><p>
+          Ya. XL SATU menggunakan teknologi Fixed Wireless Access — sinyal dikirim dari menara
+          terdekat ke perangkat di rumah Anda. Tidak ada penggalian kabel atau tiang baru.
+          Yang dipasang teknisi hanya antena penerima &amp; router — biasanya selesai dalam 1–2 jam.
+        </p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Apakah ada batasan kuota (FUP)?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div><p>
+          Tidak. Semua paket reguler XL SATU adalah unlimited tanpa FUP. Anda bisa streaming,
+          download, gaming, dan video call sebanyak yang Anda mau tanpa pelambatan tersembunyi.
+        </p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Bagaimana cara cek coverage area saya?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div><p>
+          Cara tercepat: kirim alamat lengkap Anda lewat WhatsApp ke Arul (0822 2852 1987).
+          Dia akan cek di sistem internal dan kirim konfirmasi dalam beberapa menit, lengkap
+          dengan estimasi kekuatan sinyal di lokasi Anda.
+        </p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Apakah STB benar-benar gratis?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div><p>
+          Ya, STB Android disertakan gratis untuk semua paket reguler dan tetap menjadi milik
+          rumah Anda selama berlangganan. Tidak ada biaya sewa atau deposit.
+        </p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Bagaimana cara membayar?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div><p>
+          Pembayaran bulanan bisa via aplikasi myXL, transfer bank, atau gerai mitra
+          (Indomaret, Alfamart, dll). Untuk paket promo 3+1 bulan, pembayaran dilakukan
+          di muka untuk mengaktifkan bonus bulan ke-4.
+        </p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Bagaimana kalau saya pindah rumah?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div><p>
+          Hubungi Arul sebelum pindah. Bila lokasi baru tercakup XL SATU, instalasi pemindahan
+          bisa dijadwalkan tanpa harus ganti paket. Bila tidak tercakup, akun bisa dijeda atau
+          ditutup tanpa penalti.
+        </p></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+      <div class="foot-display">
+        Internet rumah, <em>akhirnya<br>bisa diandalkan.</em>
+      </div>
+      <div class="foot-col">
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="#paket">Paket reguler</a></li>
+          <li><a href="#promo">Promo edisi</a></li>
+          <li><a href="#fitur">Fitur bonus</a></li>
+          <li><a href="#cara">Cara daftar</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Bantuan</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontak">Konsultasi</a></li>
+          <li><a href="https://wa.me/6282228521987" target="_blank" rel="noopener">WhatsApp Arul</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Agen Resmi</h4>
+        <ul>
+          <li><strong style="color:var(--ink);font-weight:700">Arul</strong></li>
+          <li><a href="https://wa.me/6282228521987" target="_blank" rel="noopener">+62 822 2852 1987</a></li>
+          <li>Solo · Jawa Tengah</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2026 — XL SATU edisi promosi via Arul. Bukan situs resmi PT XL Axiata Tbk.</span>
+      <span>Harga termasuk PPN 11% · Berlaku selama promo aktif</span>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ====== FLOATING WHATSAPP ====== -->
+<a href="https://wa.me/6282228521987?text=Halo%20Arul%2C%20saya%20mau%20info%20XL%20SATU" class="fab" target="_blank" rel="noopener" aria-label="Chat WhatsApp Arul">
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+    <path d="M16.001 3C9.376 3 4 8.376 4 15.001c0 2.118.553 4.182 1.604 6L4 28l7.16-1.578a11.93 11.93 0 0 0 4.84 1.013c6.625 0 12.001-5.376 12.001-12.001S22.626 3 16.001 3Zm0 21.832a9.83 9.83 0 0 1-5.005-1.366l-.359-.213-4.252.937.91-4.144-.234-.371a9.825 9.825 0 0 1-1.523-5.273c0-5.434 4.422-9.856 9.857-9.856 2.633 0 5.108 1.026 6.97 2.888a9.79 9.79 0 0 1 2.886 6.971c0 5.435-4.422 9.857-9.85 9.857Zm5.401-7.376c-.296-.149-1.751-.864-2.022-.962-.272-.099-.469-.149-.667.148-.198.297-.766.962-.939 1.16-.173.198-.346.223-.642.074-.296-.149-1.252-.461-2.385-1.471-.881-.786-1.476-1.756-1.65-2.053-.173-.297-.018-.457.131-.605.135-.134.296-.347.445-.52.149-.174.198-.298.297-.495.099-.198.05-.371-.024-.52-.074-.149-.667-1.611-.914-2.205-.241-.581-.486-.502-.667-.51l-.567-.011c-.198 0-.519.074-.79.371s-1.038 1.014-1.038 2.475c0 1.461 1.062 2.873 1.211 3.07.149.198 2.092 3.196 5.069 4.482.708.305 1.261.488 1.692.624.71.226 1.357.194 1.868.118.57-.085 1.751-.715 1.998-1.405.247-.69.247-1.282.173-1.405-.074-.123-.272-.198-.568-.347Z"/>
+  </svg>
+</a>
+
+<div class="toast" id="toast">
+  <span class="check">✓</span>
+  <span>Membuka WhatsApp dengan pesan Anda…</span>
+</div>
+
+<script>
+// ===== Header on scroll =====
+const header = document.getElementById('header');
+const onScroll = () => {
+  if (window.scrollY > 20) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// ===== Reveal on scroll =====
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+// ===== FAQ accordion =====
+document.querySelectorAll('.faq-item').forEach((item) => {
+  const btn = item.querySelector('.faq-q');
+  btn.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach((i) => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// ===== Package CTA → preselect in form =====
+document.querySelectorAll('[data-pkg]').forEach((cta) => {
+  cta.addEventListener('click', () => {
+    const pkg = cta.getAttribute('data-pkg');
+    const select = document.getElementById('package');
+    if (!select) return;
+    const opts = Array.from(select.options);
+    const match = opts.find((o) => o.text === pkg) || opts.find((o) => pkg.includes(o.text.split(' · ')[0]));
+    if (match) select.value = match.value || match.text;
+    else {
+      const opt = document.createElement('option');
+      opt.text = pkg; opt.value = pkg; opt.selected = true;
+      select.appendChild(opt);
+    }
+  });
+});
+
+// ===== Form → WhatsApp =====
+const form = document.getElementById('leadForm');
+const toast = document.getElementById('toast');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(form));
+  if (!data.name || !data.phone || !data.address || !data.package) {
+    [...form.querySelectorAll('[required]')].forEach((el) => {
+      if (!el.value) {
+        el.style.borderBottomColor = 'var(--accent-fire)';
+        setTimeout(() => el.style.borderBottomColor = '', 2400);
+      }
+    });
+    return;
+  }
+
+  const text =
+    `Halo Arul, saya tertarik dengan XL SATU.
+
+— Nama: ${data.name}
+— No. WA: ${data.phone}
+— Alamat: ${data.address}
+— Paket: ${data.package}
+— Waktu dihubungi: ${data.time || 'Kapan saja'}` +
+    (data.message ? `\n\nCatatan:\n${data.message}` : '') +
+    `\n\nMohon info ketersediaan & jadwal pemasangan. Terima kasih!`;
+
+  const url = `https://wa.me/6282228521987?text=${encodeURIComponent(text)}`;
+
+  toast.classList.add('show');
+  setTimeout(() => {
+    window.open(url, '_blank');
+  }, 600);
+  setTimeout(() => toast.classList.remove('show'), 3800);
+});
+
+// ===== Smooth scroll handled via CSS scroll-behavior =====
+</script>
+
+</body>
+</html>
